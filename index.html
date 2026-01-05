@@ -1,55 +1,629 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Faizan Shaikh | Sr WordPress Developer · Full Stack PHP · Shopify</title>
+    <meta name="description" content="Portfolio of Faizan Shaikh — Sr WordPress Developer, Full Stack PHP Developer, Shopify Developer. Projects, experience, skills, and contact." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2338bdf8%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236366f1%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2256%22%20height%3D%2256%22%20rx%3D%2216%22%20fill%3D%22url(%23g)%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2239%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2C%20system-ui%2C%20Segoe%20UI%2C%20Arial%22%20font-size%3D%2222%22%20font-weight%3D%22700%22%20fill%3D%22%230b1220%22%3EFS%3C/text%3E%3C/svg%3E" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CDN config (kept lightweight)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['ui-sans-serif', 'system-ui', 'Segoe UI', 'Inter', 'Roboto', 'Arial', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 10px 30px rgba(0,0,0,.35)',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Prevent layout jump while JS renders */
+        [data-js="projects"] { min-height: 200px; }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="container mx-auto px-10 py-10">
-        <h1 class="text-4xl font-bold text-center mb-10">🚀 My Projects</h1>
-        <ul class="space-y-4">
-            <li><a href="https://endowment.iima.ac.in" class="text-blue-400 hover:underline">https://endowment.iima.ac.in</a></li>
-            <li><a href="https://tintingexpress.co.uk" class="text-blue-400 hover:underline">https://tintingexpress.co.uk</a></li>
-            <li><a href="https://inferenz.ai" class="text-blue-400 hover:underline">https://inferenz.ai</a></li>
-            <li><a href="https://voxelwp.eternalsoft.in" class="text-blue-400 hover:underline">https://voxelwp.eternalsoft.in</a></li>
-            <li><a href="https://goodwebsitedevsite.eternalsoft.in" class="text-blue-400 hover:underline">https://goodwebsitedevsite.eternalsoft.in</a></li>
-            <li><a href="https://www.changinglives.fitness" class="text-blue-400 hover:underline">https://www.changinglives.fitness</a></li>
-            <li><a href="https://cleanuxgreen.com" class="text-blue-400 hover:underline">https://cleanuxgreen.com</a></li>
-            <li><a href="https://smithebike.com" class="text-blue-400 hover:underline">https://smithebike.com</a></li>
-            <li><a href="https://usdigestivehealth.com" class="text-blue-400 hover:underline">https://usdigestivehealth.com</a></li>
-            <li><a href="https://evisas.io" class="text-blue-400 hover:underline">https://evisas.io</a></li>
-            <li><a href="https://voodoo.co.uk" class="text-blue-400 hover:underline">https://voodoo.co.uk</a></li>
-            <li><a href="https://garyandeleanor.uk" class="text-blue-400 hover:underline">https://garyandeleanor.uk</a></li>
-            <li><a href="https://britishblockchainassociation.org" class="text-blue-400 hover:underline">https://britishblockchainassociation.org</a></li>
-            <li><a href="https://www.uteshiyamedicare.com" class="text-blue-400 hover:underline">https://www.uteshiyamedicare.com</a></li>
-            <li><a href="https://thisandthat.in" class="text-blue-400 hover:underline">https://thisandthat.in</a></li>
-            <li><a href="https://www.totallytransporters.co.uk" class="text-blue-400 hover:underline">https://www.totallytransporters.co.uk</a></li>
-            <li><a href="https://ctla.org.uk" class="text-blue-400 hover:underline">https://ctla.org.uk</a></li>
-            <li><a href="https://castle-concrete.com" class="text-blue-400 hover:underline">https://castle-concrete.com</a></li>
-            <li><a href="https://bostonappraisal.com" class="text-blue-400 hover:underline">https://bostonappraisal.com</a></li>
-            <li><a href="https://braddicksholidays.co.uk" class="text-blue-400 hover:underline">https://braddicksholidays.co.uk</a></li>
-            <li><a href="https://thepier-house.co.uk" class="text-blue-400 hover:underline">https://thepier-house.co.uk</a></li>
-            <li><a href="https://www.braddicksholidaycentre.co.uk" class="text-blue-400 hover:underline">https://www.braddicksholidaycentre.co.uk</a></li>
-            <li><a href="https://www.thelinetech.uk" class="text-blue-400 hover:underline">https://www.thelinetech.uk</a></li>
-            <li><a href="https://www.hiranyavarnaamalkalis.com" class="text-blue-400 hover:underline">https://www.hiranyavarnaamalkalis.com</a></li>
-            <li><a href="https://www.fastparts247.com" class="text-blue-400 hover:underline">https://www.fastparts247.com</a></li>
-            <li><a href="https://www.leadersforbusiness.com" class="text-blue-400 hover:underline">https://www.leadersforbusiness.com</a></li>
-            <li><a href="https://eternalsoft.in/Littlecurlingcources" class="text-blue-400 hover:underline">https://eternalsoft.in/Littlecurlingcources</a></li>
-            <li><a href="https://mylastminutetrip.com" class="text-blue-400 hover:underline">https://mylastminutetrip.com</a></li>
-            <li><a href="https://digicobweb.com" class="text-blue-400 hover:underline">https://digicobweb.com</a></li>
-            <li><a href="https://tinahelyfarm.ie" class="text-blue-400 hover:underline">https://tinahelyfarm.ie</a></li>
-            <li><a href="https://budgetbags.in" class="text-blue-400 hover:underline">https://budgetbags.in</a></li>
-            <li><a href="http://homeplusstudios.com" class="text-blue-400 hover:underline">http://homeplusstudios.com</a></li>
-            <li><a href="http://oollausa.com" class="text-blue-400 hover:underline">http://oollausa.com</a></li>
-            <li><a href="https://bookmyparts.com" class="text-blue-400 hover:underline">https://bookmyparts.com (Frontend designing work)</a></li>
-            <li><a href="https://mlpl.biz" class="text-blue-400 hover:underline">https://mlpl.biz</a></li>
-            <li><a href="https://sharuaatbookstore.com" class="text-blue-400 hover:underline">https://sharuaatbookstore.com</a></li>
-            <li><a href="https://www.dancingderek.com" class="text-blue-400 hover:underline">https://www.dancingderek.com</a></li>
-            <li><a href="https://www.flatbee.at" class="text-blue-400 hover:underline">https://www.flatbee.at (Frontend designing work)</a></li>
-            
-        </ul>
+<body class="bg-slate-950 text-white antialiased selection:bg-sky-500/30 selection:text-white">
+    <div class="pointer-events-none fixed inset-0 overflow-hidden">
+        <div class="absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-r from-sky-500/25 via-indigo-500/15 to-fuchsia-500/20 blur-3xl"></div>
+        <div class="absolute bottom-[-260px] right-[-180px] h-[520px] w-[520px] rounded-full bg-gradient-to-tr from-emerald-500/10 via-sky-500/10 to-indigo-500/10 blur-3xl"></div>
     </div>
+
+    <div class="relative">
+        <header class="border-b border-white/10 bg-slate-950/50 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+                <div class="flex items-center gap-3">
+                    <div class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 ring-1 ring-white/10 shadow-soft">
+                        <span class="text-sm font-semibold tracking-wide">FS</span>
+                    </div>
+                    <div class="leading-tight">
+                        <div class="font-semibold tracking-tight">Faizan Shaikh</div>
+                        <div class="text-xs text-white/60">Sr WordPress Developer · Full Stack PHP · Shopify</div>
+                    </div>
+                </div>
+                <div class="hidden items-center gap-1 md:flex">
+                    <a href="#about" class="rounded-lg px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 ring-1 ring-transparent hover:ring-white/10 transition">About</a>
+                    <a href="#skills" class="rounded-lg px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 ring-1 ring-transparent hover:ring-white/10 transition">Skills</a>
+                    <a href="#experience" class="rounded-lg px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 ring-1 ring-transparent hover:ring-white/10 transition">Experience</a>
+                    <a href="#projects" class="rounded-lg px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 ring-1 ring-transparent hover:ring-white/10 transition">Projects</a>
+                    <a href="#contact" class="rounded-lg px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 ring-1 ring-transparent hover:ring-white/10 transition">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="mx-auto max-w-6xl px-5 pb-16 pt-10 md:px-8 md:pt-14">
+            <section id="about" class="grid gap-8 md:grid-cols-[1.4fr_.6fr] md:items-start">
+                <div>
+                    <h1 class="text-3xl font-semibold tracking-tight md:text-5xl">
+                        Sr WordPress Developer
+                        <span class="text-white/60">who ships clean, scalable builds.</span>
+                    </h1>
+
+                    <p class="mt-4 max-w-2xl text-sm leading-6 text-white/70 md:text-base">
+                        I love to code, and when I’m passionate about something, I pick it up really easily.
+                    </p>
+
+                    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                        <a href="#projects" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-3 text-sm ring-1 ring-white/10 hover:bg-white/15 transition">
+                            View projects
+                        </a>
+                        <a href="tel:+919173165851" class="inline-flex items-center justify-center rounded-xl bg-white/5 px-4 py-3 text-sm text-white/80 ring-1 ring-white/10 hover:bg-white/10 hover:text-white transition">
+                            +91 91731 65851
+                        </a>
+                        <a href="https://www.linkedin.com/in/faizan-shaikh38" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-white/5 px-4 py-3 text-sm text-white/80 ring-1 ring-white/10 hover:bg-white/10 hover:text-white transition">
+                            LinkedIn
+                        </a>
+                        <a href="https://faizansatgit.github.io/projects/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-white/5 px-4 py-3 text-sm text-white/80 ring-1 ring-white/10 hover:bg-white/10 hover:text-white transition">
+                            Portfolio
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                    <div class="text-sm font-medium">Top skills</div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Shopify Theme Development</span>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Shopify Custom App Development</span>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Headless CMS (Next.js + WordPress + GraphQL)</span>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">WordPress / PHP</span>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Angular (static sites)</span>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">HTML + Bootstrap</span>
+                    </div>
+
+                    <div class="mt-6 border-t border-white/10 pt-5">
+                        <div class="text-sm font-medium">Contact</div>
+                        <div class="mt-3 space-y-2 text-sm text-white/70">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="text-white/60">Phone</div>
+                                <a class="text-white/80 hover:text-white hover:underline" href="tel:+919173165851">+91 91731 65851</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="skills" class="mt-12">
+                <div class="flex items-end justify-between gap-4">
+                    <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Skills</h2>
+                    <div class="text-xs text-white/50">Focused stack + delivery mindset.</div>
+                </div>
+                <div class="mt-2 text-sm text-white/70">
+                    A categorized view of my day-to-day tools and strengths.
+                </div>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">WordPress / PHP</div>
+                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-white/70 ring-1 ring-white/10">Core</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">Themes, plugins, SEO-minded builds, and production maintenance.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">WordPress</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">PHP</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Theme Development</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Plugin Development</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Search Engine Optimization (SEO)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">MySQL</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">phpMyAdmin</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">Shopify</div>
+                            <span class="rounded-full bg-sky-500/15 px-2.5 py-1 text-[11px] text-sky-200 ring-1 ring-sky-400/20">E‑commerce</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">Theme work + custom apps to support store workflows and integrations.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Shopify</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Shopify Theme Development</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Shopify Custom App Development</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">Frontend</div>
+                            <span class="rounded-full bg-emerald-500/15 px-2.5 py-1 text-[11px] text-emerald-200 ring-1 ring-emerald-400/20">UI</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">Responsive UI, interaction, and performance-friendly pages.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">HTML5</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Cascading Style Sheets (CSS)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">JavaScript</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">jQuery</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">AJAX</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Bootstrap (Framework)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Angular</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Web Design</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">Backend / APIs</div>
+                            <span class="rounded-full bg-indigo-500/15 px-2.5 py-1 text-[11px] text-indigo-200 ring-1 ring-indigo-400/20">Server</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">API-driven builds and integrations when needed.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Backend Development with FastAPI</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Python (FastAPI)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Headless CMS (Next Js + Wordpress + GraphQL)</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">Tools / Design</div>
+                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-white/70 ring-1 ring-white/10">Workflow</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">Design handoff, editing, productivity, and modern AI tools.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Figma (Software)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Adobe Photoshop</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Canva</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Image Editing</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Image Processing</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Microsoft Office</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Cursor Pro - AI code editor</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">ChatGPT</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Artificial Intelligence (AI)</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="text-sm font-medium">Management / Soft skills</div>
+                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-white/70 ring-1 ring-white/10">Team</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70">Client coordination, planning, and team ownership.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Project Management</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Customer Relationship Management (CRM)</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Team Management</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Communication</span>
+                            <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-white/80 ring-1 ring-white/10">Painting</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="mt-12">
+                <div class="flex items-end justify-between gap-4">
+                    <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Experience</h2>
+                    <div class="text-xs text-white/50">Client delivery, mentorship, and ownership.</div>
+                </div>
+
+                <div class="mt-5 grid gap-4">
+                    <article class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <div class="text-sm font-semibold">Eternal Web Pvt Ltd — Digital Transformation with AWS Cloud and AI</div>
+                                <div class="mt-1 text-sm text-white/70">Sr WordPress Developer</div>
+                            </div>
+                            <div class="text-xs text-white/60 sm:text-right">
+                                Jan 2023 — Present<br/>
+                                Ahmedabad, Gujarat, India
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-2 text-sm text-white/70">
+                            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400"></span>WordPress/PHP development focused on website development and customization.</li>
+                            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400"></span>Client communication, requirement understanding, and timely delivery.</li>
+                            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400"></span>Mentoring juniors/trainees; improved managerial skills around timelines, team coordination, and delivery.</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <div class="text-sm font-semibold">R B Outsourcing</div>
+                                <div class="mt-1 text-sm text-white/70">WordPress Developer</div>
+                            </div>
+                            <div class="text-xs text-white/60 sm:text-right">
+                                Jun 2021 — Dec 2023<br/>
+                                Ahmedabad, Gujarat, India
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-2 text-sm text-white/70">
+                            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Built and customized WordPress websites.</li>
+                            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Worked on static websites using Angular; built responsive and dynamic UI components.</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <div class="text-sm font-semibold">Meem Infoware</div>
+                                <div class="mt-1 text-sm text-white/70">Jr Frontend Web Developer</div>
+                            </div>
+                            <div class="text-xs text-white/60 sm:text-right">
+                                Aug 2020 — May 2021<br/>
+                                Ahmedabad, Gujarat, India
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-white/70">
+                            Worked as a Web Developer and Marketing Executive, gaining experience in both development and marketing.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <div class="text-sm font-semibold">Trainee (under senior software engineer)</div>
+                                <div class="mt-1 text-sm text-white/70">Junior Frontend Developer (Trainee)</div>
+                            </div>
+                            <div class="text-xs text-white/60 sm:text-right">
+                                Dec 2019 — Jun 2020<br/>
+                                Ahmedabad, Gujarat, India
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-white/70">
+                            Started as a Junior Frontend Developer (Trainee) under the guidance of Ali Khedavala (Full Stack .NET Developer). Assisted with page design using HTML and Bootstrap.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="education" class="mt-12">
+                <div class="flex items-end justify-between gap-4">
+                    <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Education</h2>
+                    <div class="text-xs text-white/50">Academic background.</div>
+                </div>
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="text-sm font-semibold">CU Shah Science College, Ahmedabad</div>
+                        <div class="mt-1 text-sm text-white/70">BCA, Computer Science</div>
+                        <div class="mt-2 text-xs text-white/60">May 2019 — Apr 2022</div>
+                    </div>
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="text-sm font-semibold">Ankur High School</div>
+                        <div class="mt-1 text-sm text-white/70">HSC — Science, Mathematics and Computer Science</div>
+                        <div class="mt-2 text-xs text-white/60">May 2018 — Mar 2019</div>
+                    </div>
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="text-sm font-semibold">Bharat Higher Secondary School</div>
+                        <div class="mt-1 text-sm text-white/70">SSC</div>
+                        <div class="mt-2 text-xs text-white/60">May 2016 — Mar 2017</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="mt-12">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Projects</h2>
+                        <div class="mt-1 text-xs text-white/50">Search by domain/name. Click a card to open in a new tab.</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="copyAllBtn" type="button" class="rounded-xl bg-white/10 px-4 py-3 text-sm text-white/90 hover:bg-white/15 ring-1 ring-white/10 transition">
+                            Copy filtered links
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <label class="relative flex-1">
+                        <span class="sr-only">Search projects</span>
+                        <input id="searchInput" type="search" placeholder="Search projects (e.g. eternalsoft, .co.uk, fitness...)"
+                            class="w-full rounded-xl bg-white/5 px-4 py-3 pr-12 text-sm text-white placeholder:text-white/40 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-sky-500/60" />
+                        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white/40">Ctrl/⌘ K</span>
+                    </label>
+
+                    <div class="flex items-center gap-2">
+                        <button data-filter="all" class="filterBtn rounded-xl bg-white/10 px-4 py-3 text-sm ring-1 ring-white/10 hover:bg-white/15 transition">
+                            All
+                        </button>
+                        <button data-filter="frontend" class="filterBtn rounded-xl bg-white/5 px-4 py-3 text-sm text-white/80 ring-1 ring-white/10 hover:bg-white/10 hover:text-white transition">
+                            Frontend
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex items-center gap-2 text-xs text-white/60">
+                    <span id="countText" class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">0 projects</span>
+                    <span class="hidden sm:inline">Tip: press <span class="rounded bg-white/10 px-1 py-0.5 ring-1 ring-white/10">Ctrl</span>/<span class="rounded bg-white/10 px-1 py-0.5 ring-1 ring-white/10">⌘</span> + <span class="rounded bg-white/10 px-1 py-0.5 ring-1 ring-white/10">K</span> to focus search.</span>
+                </div>
+
+                <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-js="projects" aria-live="polite"></div>
+            </section>
+
+            <section id="contact" class="mt-12">
+                <div class="flex items-end justify-between gap-4">
+                    <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Contact</h2>
+                    <div class="text-xs text-white/50">Open to opportunities and collaborations.</div>
+                </div>
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="text-sm font-medium">Reach me</div>
+                        <div class="mt-4 space-y-3 text-sm text-white/70">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-white/60">Phone</div>
+                                <a class="text-white/80 hover:text-white hover:underline" href="tel:+919173165851">+91 91731 65851</a>
+                            </div>
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-white/60">LinkedIn</div>
+                                <a class="text-white/80 hover:text-white hover:underline" href="https://www.linkedin.com/in/faizan-shaikh38" target="_blank" rel="noopener noreferrer">/in/faizan-shaikh38</a>
+                            </div>
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-white/60">Portfolio</div>
+                                <a class="text-white/80 hover:text-white hover:underline" href="https://faizansatgit.github.io/projects/" target="_blank" rel="noopener noreferrer">faizansatgit.github.io/projects</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+                        <div class="text-sm font-medium">Quick actions</div>
+                        <p class="mt-4 text-sm text-white/70">
+                            Prefer a call? Reach out and I’ll get back quickly.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <a href="tel:+919173165851" class="rounded-xl bg-white/10 px-4 py-3 text-sm ring-1 ring-white/10 hover:bg-white/15 transition">Call</a>
+                            <a href="https://www.linkedin.com/in/faizan-shaikh38" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-white/5 px-4 py-3 text-sm text-white/80 ring-1 ring-white/10 hover:bg-white/10 hover:text-white transition">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10">
+            <div class="mx-auto max-w-6xl px-5 py-8 text-xs text-white/50 md:px-8">
+                <span>© <span id="year"></span> Faizan Shaikh. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Footer year
+        document.getElementById('year').textContent = String(new Date().getFullYear());
+    </script>
+
+    <template id="projectCardTpl">
+        <a class="group relative rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 hover:bg-white/7 hover:ring-white/15 transition focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+           target="_blank" rel="noopener noreferrer">
+            <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-3 min-w-0">
+                    <img data-js="icon" alt="" class="h-10 w-10 rounded-xl bg-white/10 ring-1 ring-white/10 object-cover" loading="lazy" />
+                    <div class="min-w-0">
+                        <div data-js="host" class="truncate text-sm font-medium"></div>
+                        <div data-js="url" class="truncate text-xs text-white/60"></div>
+                    </div>
+                </div>
+                <span data-js="badge" class="hidden shrink-0 rounded-full bg-sky-500/15 px-2.5 py-1 text-[11px] font-medium text-sky-200 ring-1 ring-sky-400/20">
+                    Frontend
+                </span>
+            </div>
+            <div data-js="note" class="mt-3 text-sm text-white/70"></div>
+            <div class="mt-4 flex items-center justify-between text-xs text-white/50">
+                <span class="rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Open ↗</span>
+                <span class="opacity-0 group-hover:opacity-100 transition">New tab</span>
+            </div>
+        </a>
+    </template>
+
+    <script>
+        const PROJECTS = [
+            { url: 'https://endowment.iima.ac.in', note: '' },
+            { url: 'https://tintingexpress.co.uk', note: '' },
+            { url: 'https://inferenz.ai', note: '' },
+            { url: 'https://voxelwp.eternalsoft.in', note: '' },
+            { url: 'https://goodwebsitedevsite.eternalsoft.in', note: '' },
+            { url: 'https://www.changinglives.fitness', note: '' },
+            { url: 'https://cleanuxgreen.com', note: '' },
+            { url: 'https://smithebike.com', note: '' },
+            { url: 'https://usdigestivehealth.com', note: '' },
+            { url: 'https://evisas.io', note: '' },
+            { url: 'https://voodoo.co.uk', note: '' },
+            { url: 'https://garyandeleanor.uk', note: '' },
+            { url: 'https://britishblockchainassociation.org', note: '' },
+            { url: 'https://www.uteshiyamedicare.com', note: '' },
+            { url: 'https://thisandthat.in', note: '' },
+            { url: 'https://www.totallytransporters.co.uk', note: '' },
+            { url: 'https://ctla.org.uk', note: '' },
+            { url: 'https://castle-concrete.com', note: '' },
+            { url: 'https://bostonappraisal.com', note: '' },
+            { url: 'https://braddicksholidays.co.uk', note: '' },
+            { url: 'https://thepier-house.co.uk', note: '' },
+            { url: 'https://www.braddicksholidaycentre.co.uk', note: '' },
+            { url: 'https://www.thelinetech.uk', note: '' },
+            { url: 'https://www.hiranyavarnaamalkalis.com', note: '' },
+            { url: 'https://www.fastparts247.com', note: '' },
+            { url: 'https://www.leadersforbusiness.com', note: '' },
+            { url: 'https://eternalsoft.in/Littlecurlingcources', note: '' },
+            { url: 'https://mylastminutetrip.com', note: '' },
+            { url: 'https://digicobweb.com', note: '' },
+            { url: 'https://tinahelyfarm.ie', note: '' },
+            { url: 'https://budgetbags.in', note: '' },
+            { url: 'http://homeplusstudios.com', note: '' },
+            { url: 'http://oollausa.com', note: '' },
+            { url: 'https://bookmyparts.com', note: 'Frontend designing work', tags: ['frontend'] },
+            { url: 'https://mlpl.biz', note: '' },
+            { url: 'https://sharuaatbookstore.com', note: '' },
+            { url: 'https://www.dancingderek.com', note: '' },
+            { url: 'https://www.flatbee.at', note: 'Frontend designing work', tags: ['frontend'] },
+        ];
+
+        const els = {
+            grid: document.querySelector('[data-js="projects"]'),
+            tpl: document.getElementById('projectCardTpl'),
+            search: document.getElementById('searchInput'),
+            count: document.getElementById('countText'),
+            filterBtns: Array.from(document.querySelectorAll('.filterBtn')),
+            copyAllBtn: document.getElementById('copyAllBtn'),
+        };
+
+        function hostnameFromUrl(raw) {
+            try {
+                const u = new URL(raw);
+                return u.hostname.replace(/^www\./, '');
+            } catch {
+                return raw;
+            }
+        }
+
+        function faviconUrl(raw) {
+            // Low-friction favicons; if blocked, image will just fail gracefully.
+            const host = hostnameFromUrl(raw);
+            return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=128`;
+        }
+
+        const FALLBACK_ICON_DATA_URI = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="rgba(56,189,248,.35)"/>
+      <stop offset="1" stop-color="rgba(99,102,241,.25)"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#g)"/>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="none" stroke="rgba(255,255,255,.18)"/>
+  <g fill="none" stroke="rgba(255,255,255,.85)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="26"/>
+    <path d="M38 64h52"/>
+    <path d="M64 38c8 8 8 44 0 52"/>
+    <path d="M64 38c-8 8-8 44 0 52"/>
+  </g>
+</svg>
+        `)}`;
+
+        function applyFaviconWithFallback(imgEl, url) {
+            imgEl.onerror = () => {
+                // Prevent infinite onerror loop
+                imgEl.onerror = null;
+                imgEl.src = FALLBACK_ICON_DATA_URI;
+            };
+            imgEl.src = faviconUrl(url);
+        }
+
+        function normalizeProject(p) {
+            const tags = Array.isArray(p.tags) ? p.tags : [];
+            const isFrontend = tags.includes('frontend') || /frontend/i.test(p.note || '');
+            return {
+                url: p.url,
+                note: p.note || '',
+                host: hostnameFromUrl(p.url),
+                isFrontend,
+            };
+        }
+
+        const state = {
+            q: '',
+            filter: 'all', // 'all' | 'frontend'
+        };
+
+        function matches(p) {
+            if (state.filter === 'frontend' && !p.isFrontend) return false;
+            if (!state.q) return true;
+            const q = state.q.toLowerCase();
+            return (p.host + ' ' + p.url + ' ' + p.note).toLowerCase().includes(q);
+        }
+
+        function render() {
+            const projects = PROJECTS.map(normalizeProject).filter(matches);
+            els.grid.innerHTML = '';
+
+            for (const p of projects) {
+                const node = els.tpl.content.firstElementChild.cloneNode(true);
+                node.href = p.url;
+                node.querySelector('[data-js="host"]').textContent = p.host;
+                node.querySelector('[data-js="url"]').textContent = p.url;
+
+                const noteEl = node.querySelector('[data-js="note"]');
+                noteEl.textContent = p.note ? p.note : 'Client website / production build';
+
+                const badge = node.querySelector('[data-js="badge"]');
+                if (p.isFrontend) badge.classList.remove('hidden');
+
+                const icon = node.querySelector('[data-js="icon"]');
+                applyFaviconWithFallback(icon, p.url);
+                icon.alt = `${p.host} favicon`;
+
+                els.grid.appendChild(node);
+            }
+
+            const label = projects.length === 1 ? 'project' : 'projects';
+            els.count.textContent = `${projects.length} ${label}`;
+        }
+
+        function setFilter(next) {
+            state.filter = next;
+            for (const btn of els.filterBtns) {
+                const isActive = btn.dataset.filter === next;
+                btn.classList.toggle('bg-white/10', isActive);
+                btn.classList.toggle('bg-white/5', !isActive);
+                btn.classList.toggle('text-white/80', !isActive);
+            }
+            render();
+        }
+
+        // Events
+        els.search.addEventListener('input', (e) => {
+            state.q = e.target.value.trim();
+            render();
+        });
+
+        for (const btn of els.filterBtns) {
+            btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const isMac = navigator.platform.toLowerCase().includes('mac');
+            const mod = isMac ? e.metaKey : e.ctrlKey;
+            if (mod && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                els.search.focus();
+            }
+        });
+
+        els.copyAllBtn.addEventListener('click', async () => {
+            const projects = PROJECTS.map(normalizeProject).filter(matches);
+            const text = projects.map(p => p.url + (p.note ? ` - ${p.note}` : '')).join('\n');
+            try {
+                await navigator.clipboard.writeText(text);
+                els.copyAllBtn.textContent = 'Copied!';
+                setTimeout(() => (els.copyAllBtn.textContent = 'Copy links'), 1200);
+            } catch {
+                // Fallback for insecure contexts
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                els.copyAllBtn.textContent = 'Copied!';
+                setTimeout(() => (els.copyAllBtn.textContent = 'Copy links'), 1200);
+            }
+        });
+
+        // Initial render
+        setFilter('all');
+    </script>
 </body>
 </html>
