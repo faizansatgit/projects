@@ -853,6 +853,8 @@
 
     <script>
         const PROJECTS = [
+            { url: 'Accounting Software: Rental properties', note: 'Html, Css, Javascript, Php, Mysql, Python', tags: ['Php'] },
+        
             { url: 'http://allureglobalaccounting.com', note: 'Html, Css, Javascript, Php', tags: ['Php'] },
 
             { url: 'https://wooum.com', note: 'Shopify development', tags: ['shopify'] },
@@ -898,7 +900,9 @@
             { url: 'https://www.jindalhome.com', note: 'WordPress development' },
             { url: 'https://www.jindalhome.in', note: 'WordPress development' },
             { url: 'https://www.jitoahmedabad.org', note: 'WordPress development' },
+            { url: 'https://siddhashram.com', note: 'WordPress development' },
             { url: 'https://dealsncodes.com', note: 'WordPress development' },
+            { url: 'https://www.meeminfoware.in', note: 'Html, Css, Javascript', tags: ['Php'] },
         ];
 
         const els = {
@@ -956,11 +960,13 @@
         function normalizeProject(p) {
             const tags = Array.isArray(p.tags) ? p.tags : [];
             const isFrontend = tags.includes('frontend') || /frontend/i.test(p.note || '');
+            const hasLink = /^https?:\/\//i.test(p.url);
             return {
                 url: p.url,
                 note: p.note || '',
                 host: hostnameFromUrl(p.url),
                 isFrontend,
+                hasLink,
             };
         }
 
@@ -982,21 +988,35 @@
 
             for (const p of projects) {
                 const node = els.tpl.content.firstElementChild.cloneNode(true);
-                node.href = p.url;
-                node.querySelector('[data-js="host"]').textContent = p.host;
-                node.querySelector('[data-js="url"]').textContent = p.url;
-
-                const noteEl = node.querySelector('[data-js="note"]');
-                noteEl.textContent = p.note ? p.note : 'Client website / production build';
-
-                const badge = node.querySelector('[data-js="badge"]');
-                if (p.isFrontend) badge.classList.remove('hidden');
-
-                const icon = node.querySelector('[data-js="icon"]');
-                applyFaviconWithFallback(icon, p.url);
-                icon.alt = `${p.host} favicon`;
-
-                els.grid.appendChild(node);
+                if (!p.hasLink) {
+                    const div = document.createElement('div');
+                    div.className = node.className.replace(/\bgroup\b/g, '').trim();
+                    while (node.firstChild) div.appendChild(node.firstChild);
+                    div.querySelector('[data-js="host"]').textContent = p.host;
+                    div.querySelector('[data-js="url"]').textContent = p.url;
+                    const noteEl = div.querySelector('[data-js="note"]');
+                    noteEl.textContent = p.note ? p.note : 'Local project';
+                    const badge = div.querySelector('[data-js="badge"]');
+                    if (p.isFrontend) badge.classList.remove('hidden');
+                    const icon = div.querySelector('[data-js="icon"]');
+                    icon.src = FALLBACK_ICON_DATA_URI;
+                    icon.alt = `${p.host} favicon`;
+                    const openSpan = div.querySelector('.mt-4');
+                    if (openSpan) openSpan.innerHTML = '<span class="rounded-full bg-white px-2.5 py-1 ring-1 ring-slate-200">Local</span>';
+                    els.grid.appendChild(div);
+                } else {
+                    node.href = p.url;
+                    node.querySelector('[data-js="host"]').textContent = p.host;
+                    node.querySelector('[data-js="url"]').textContent = p.url;
+                    const noteEl = node.querySelector('[data-js="note"]');
+                    noteEl.textContent = p.note ? p.note : 'Client website / production build';
+                    const badge = node.querySelector('[data-js="badge"]');
+                    if (p.isFrontend) badge.classList.remove('hidden');
+                    const icon = node.querySelector('[data-js="icon"]');
+                    applyFaviconWithFallback(icon, p.url);
+                    icon.alt = `${p.host} favicon`;
+                    els.grid.appendChild(node);
+                }
             }
 
             const label = projects.length === 1 ? 'project' : 'projects';
@@ -1034,7 +1054,7 @@
         });
 
         els.copyAllBtn.addEventListener('click', async () => {
-            const projects = PROJECTS.map(normalizeProject).filter(matches);
+            const projects = PROJECTS.map(normalizeProject).filter(matches).filter(p => p.hasLink);
             const text = projects.map(p => p.url + (p.note ? ` - ${p.note}` : '')).join('\n');
             try {
                 await navigator.clipboard.writeText(text);
